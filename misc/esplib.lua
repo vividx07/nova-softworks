@@ -200,6 +200,11 @@ do -- Initialize
                 return
             end
             
+            if not plr or not plr.Parent then
+                HideESP()
+                return
+            end
+            
             if not plr.Character or not plr.Character:FindFirstChild("HumanoidRootPart") then
                 HideESP()
                 return
