@@ -356,6 +356,11 @@ function espfunctions.remove_esp(instance)
     end
 end
 
+if esplib.name.enabled and not data.name then esplib.add_name(instance) data = espinstances[instance] end
+if esplib.box.enabled and not data.box then esplib.add_box(instance) data = espinstances[instance] end
+if esplib.distance.enabled and not data.distance then esplib.add_distance(instance) data = espinstances[instance] end
+if esplib.tracer.enabled and not data.tracer then esplib.add_tracer(instance) data = espinstances[instance] end
+if esplib.healthbar.enabled and not data.healthbar then esplib.add_healthbar(instance) data = espinstances[instance] end
 local function render_loop()
     local instances_copy = {}
     for instance, data in pairs(espinstances) do
