@@ -416,7 +416,7 @@ do -- Initialize
         end
         
         -- Create connection and store it for cleanup
-        local Connection = Euphoria.RunService.RenderStepped:Connect(UpdateESP)
+        local Connection = RunService.RenderStepped:Connect(UpdateESP)
         
         -- Store player data for cleanup
         PlayerESPData[plr] = {
